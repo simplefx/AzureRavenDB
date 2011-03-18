@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "AzureRavenDB", "AzureRavenDB\AzureRavenDB.ccproj", "{B85742C8-2F40-48CF-9C41-B5112DA21558}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RavenWorker", "RavenWorker\RavenWorker.csproj", "{B8DC0233-FC27-4560-9565-547FA7D3462A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RavenAssemblies", "RavenAssemblies", "{A6FE3554-E2E6-4BDA-9EE4-217F467F9BFA}"
+	ProjectSection(SolutionItems) = preProject
+		RavenAssemblies\AsyncCtpLibrary.dll = RavenAssemblies\AsyncCtpLibrary.dll
+		RavenAssemblies\Esent.Interop.dll = RavenAssemblies\Esent.Interop.dll
+		RavenAssemblies\ICSharpCode.NRefactory.dll = RavenAssemblies\ICSharpCode.NRefactory.dll
+		RavenAssemblies\log4net.dll = RavenAssemblies\log4net.dll
+		RavenAssemblies\Lucene.Net.dll = RavenAssemblies\Lucene.Net.dll
+		RavenAssemblies\MissingBitsFromClientProfile.dll = RavenAssemblies\MissingBitsFromClientProfile.dll
+		RavenAssemblies\Newtonsoft.Json.dll = RavenAssemblies\Newtonsoft.Json.dll
+		RavenAssemblies\Raven.Abstractions.dll = RavenAssemblies\Raven.Abstractions.dll
+		RavenAssemblies\Raven.Client.Lightweight.dll = RavenAssemblies\Raven.Client.Lightweight.dll
+		RavenAssemblies\Raven.Database.dll = RavenAssemblies\Raven.Database.dll
+		RavenAssemblies\Raven.Http.dll = RavenAssemblies\Raven.Http.dll
+		RavenAssemblies\Raven.Munin.dll = RavenAssemblies\Raven.Munin.dll
+		RavenAssemblies\Raven.Storage.Esent.dll = RavenAssemblies\Raven.Storage.Esent.dll
+		RavenAssemblies\Raven.Storage.Managed.dll = RavenAssemblies\Raven.Storage.Managed.dll
+		RavenAssemblies\Rhino.Licensing.dll = RavenAssemblies\Rhino.Licensing.dll
+		RavenAssemblies\Spatial.Net.dll = RavenAssemblies\Spatial.Net.dll
+		RavenAssemblies\SpellChecker.Net.dll = RavenAssemblies\SpellChecker.Net.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple.Azure", "Simple.Azure\Simple.Azure.csproj", "{F1DABA73-2B8F-44D4-9D44-14A29F5126B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B85742C8-2F40-48CF-9C41-B5112DA21558}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B85742C8-2F40-48CF-9C41-B5112DA21558}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B85742C8-2F40-48CF-9C41-B5112DA21558}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B85742C8-2F40-48CF-9C41-B5112DA21558}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8DC0233-FC27-4560-9565-547FA7D3462A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8DC0233-FC27-4560-9565-547FA7D3462A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8DC0233-FC27-4560-9565-547FA7D3462A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8DC0233-FC27-4560-9565-547FA7D3462A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1DABA73-2B8F-44D4-9D44-14A29F5126B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1DABA73-2B8F-44D4-9D44-14A29F5126B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1DABA73-2B8F-44D4-9D44-14A29F5126B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1DABA73-2B8F-44D4-9D44-14A29F5126B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

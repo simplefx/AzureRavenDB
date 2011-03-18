@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="AzureRavenDB" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="1" osVersion="*">
+  <Role name="RavenWorker">
+    <Instances count="2" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=ravendb;AccountKey=HTue4RkUSHsWDMK5bgq28alJHDMGgho6NxsodXJ3buLXl9GTO5FpqlHYJyN1io0yfLwGAwSQKhdMpFm+pMqW8Q==" />
+      <!--<Setting name="StorageAccount" value="UseDevelopmentStorage=true" />-->
+      <Setting name="StorageAccount" value="DefaultEndpointsProtocol=http;AccountName=ravendb;AccountKey=HTue4RkUSHsWDMK5bgq28alJHDMGgho6NxsodXJ3buLXl9GTO5FpqlHYJyN1io0yfLwGAwSQKhdMpFm+pMqW8Q==" />
+    </ConfigurationSettings>
+    <Certificates>
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

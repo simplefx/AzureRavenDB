@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="AzureRavenDB" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition">
+  <WorkerRole name="RavenWorker" vmsize="Small">
+    <Imports>
+      <Import moduleName="Diagnostics" />
+    </Imports>
+    <Runtime executionContext="elevated" />
+    <LocalResources>
+      <LocalStorage name="RavenCache" cleanOnRoleRecycle="false" sizeInMB="128" />
+    </LocalResources>
+    <ConfigurationSettings>
+      <Setting name="StorageAccount" />
+    </ConfigurationSettings>
+    <Endpoints>
+      <InputEndpoint name="Raven" protocol="tcp" port="8080" localPort="8080" />
+      <InternalEndpoint name="Replication" protocol="tcp" />
+    </Endpoints>
+  </WorkerRole>
+</ServiceDefinition>

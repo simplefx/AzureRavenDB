@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <DeploymentBuildOnly>False</DeploymentBuildOnly>
+    <DeploymentAccountName>MarkRendleAzure</DeploymentAccountName>
+    <DeploymentHostedService>ravendemo</DeploymentHostedService>
+    <DeploymentHostedServiceLabel>Raven</DeploymentHostedServiceLabel>
+    <DeploymentSlot>Staging</DeploymentSlot>
+    <DeploymentIncludeIntellitrace>True</DeploymentIncludeIntellitrace>
+    <DeploymentEnableWebDeploy>False</DeploymentEnableWebDeploy>
+    <DeploymentStorageService>ravendb</DeploymentStorageService>
+    <DeploymentStorageServiceLabel>ravendb</DeploymentStorageServiceLabel>
+    <DeploymentLabel>AzureRavenDB - 18/03/2011 18:31:05</DeploymentLabel>
+    <DeploymentPromptBeforeDeleting>True</DeploymentPromptBeforeDeleting>
+    <DeploymentIsExpanded>False</DeploymentIsExpanded>
+  </PropertyGroup>
+</Project>
