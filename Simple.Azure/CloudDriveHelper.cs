@@ -14,7 +14,13 @@ namespace Simple.Azure
         private readonly string _containerName;
         private readonly string _vhdName;
 
-        private CloudDrive _ravenDataDrive;
+        private CloudDrive _cloudDrive;
+
+        public CloudDrive CloudDrive
+        {
+            get { return _cloudDrive; }
+        }
+
         LocalResource _localCache;
         private CloudBlobContainer _ravenDrives;
         readonly CloudStorageAccount _ravenDataStorageAccount = CloudStorageAccount.Parse(RoleEnvironment.GetConfigurationSettingValue("StorageAccount"));
@@ -38,7 +44,7 @@ namespace Simple.Azure
 
             CreateDrive();
 
-            var ravenDrivePath = _ravenDataDrive.Mount(_localCache.MaximumSizeInMegabytes, DriveMountOptions.Force);
+            var ravenDrivePath = _cloudDrive.Mount(_localCache.MaximumSizeInMegabytes, DriveMountOptions.Force);
 
             return ravenDrivePath;
         }
@@ -68,13 +74,18 @@ namespace Simple.Azure
             try
             {
                 var vhdUrl = _blobClient.GetContainerReference(_containerName).GetPageBlobReference(_vhdName).Uri.ToString();
-                _ravenDataDrive = _ravenDataStorageAccount.CreateCloudDrive(vhdUrl);
-                _ravenDataDrive.Create(_localCache.MaximumSizeInMegabytes);
+                _cloudDrive = _ravenDataStorageAccount.CreateCloudDrive(vhdUrl);
+                _cloudDrive.Create(_localCache.MaximumSizeInMegabytes);
             }
             catch (CloudDriveException ex)
             {
                 Trace.TraceWarning(ex.Message);
             }
+        }
+
+        internal void Unmount()
+        {
+            _cloudDrive.Unmount();
         }
     }
 

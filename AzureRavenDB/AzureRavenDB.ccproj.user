@@ -10,7 +10,7 @@
     <DeploymentEnableWebDeploy>False</DeploymentEnableWebDeploy>
     <DeploymentStorageService>ravendb</DeploymentStorageService>
     <DeploymentStorageServiceLabel>ravendb</DeploymentStorageServiceLabel>
-    <DeploymentLabel>AzureRavenDB - 18/03/2011 18:31:05</DeploymentLabel>
+    <DeploymentLabel>AzureRavenDB - 23/03/2011 12:40:30</DeploymentLabel>
     <DeploymentPromptBeforeDeleting>True</DeploymentPromptBeforeDeleting>
     <DeploymentIsExpanded>False</DeploymentIsExpanded>
   </PropertyGroup>

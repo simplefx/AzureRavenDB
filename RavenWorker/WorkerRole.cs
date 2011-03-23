@@ -18,6 +18,7 @@ namespace RavenWorker
     {
         private DocumentDatabase _database;
         private RavenDbHttpServer _server;
+        private CloudDriveHelper _cloudDriveHelper;
 
         public override void Run()
         {
@@ -131,10 +132,10 @@ namespace RavenWorker
             return string.Format("http://{0}:{1}/", endPoint.Address, RoleEnvironment.CurrentRoleInstance.InstanceEndpoints["Raven"].IPEndpoint.Port);
         }
 
-        private static string MountCloudDrive()
+        private string MountCloudDrive()
         {
-            var helper = new CloudDriveHelper("raven", RoleEnvironment.CurrentRoleInstance.Id + ".vhd");
-            var drive = helper.MountCloudDrive();
+            _cloudDriveHelper = new CloudDriveHelper("raven", RoleEnvironment.CurrentRoleInstance.Id + ".vhd");
+            var drive = _cloudDriveHelper.MountCloudDrive();
 
             if (!drive.EndsWith("\\")) drive += "\\";
             return drive;
@@ -143,6 +144,7 @@ namespace RavenWorker
         public override void OnStop()
         {
             StopRaven();
+            _cloudDriveHelper.TryUnmount();
             base.OnStop();
         }
 
